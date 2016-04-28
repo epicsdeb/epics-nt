@@ -1,0 +1,33 @@
+Source: epics-nt
+Section: libdevel
+Priority: extra
+Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
+Build-Depends: debhelper (>= 9), epics-debhelper (>= 8.14~),
+               epics-dev,
+               epics-pvd-dev,
+               epics-pva-dev,
+Standards-Version: 3.9.6
+Homepage: http://epics-pvdata.sourceforge.net/
+Vcs-Git: https://github.com/epicsdeb/epics-nt.git
+Vcs-Browser: https://github.com/epicsdeb/epics-nt
+
+Package: epics-nt-dev
+Architecture: any
+Depends: libnt5.0.0+20160412 (= ${binary:Version}),
+         ${shlibs:Depends}, ${misc:Depends},
+         ${epics:Depends},
+Description: Standardized container helpers for pvData
+ A set of standardized classes which wrapper an
+ underlying pvData container.
+ .
+ This package contains headers and libraries needed at build time.
+
+Package: libnt5.0.0+20160412
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: Standardized container helpers for pvData
+ A set of standardized classes which wrapper an
+ underlying pvData container.
+ .
+ This package contains runtime libraries
+
